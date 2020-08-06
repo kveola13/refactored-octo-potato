@@ -14,7 +14,7 @@ public class UserAccessAspect {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Before("execution(*  com.kveola13.springaop.data.*.*(..))")
+    @Before("execution(*  com.kveola13.springaop.aspect.CommonJoinPointConfig.dataLayerExecution())")
     public void before(JoinPoint joinPoint) {
         logger.info("Check for user access");
         logger.info("Intercepted Method call {}", joinPoint);
