@@ -26,4 +26,9 @@ public class CommonJoinPointConfig {
     public void dataLayerExecutionWithin() {
 
     }
+
+    @Pointcut("@annotation(com.kveola13.springaop.aspect.TrackTime)")
+    public void trackTimeAnnotation(){
+
+    }
 }
